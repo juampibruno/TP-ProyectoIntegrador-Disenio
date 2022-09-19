@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns="http://java.sun.com/xml/ns/persistence"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+  <persistence-unit name="db" transaction-type="RESOURCE_LOCAL">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <class>domain.Admin</class>
+    <class>domain.AgenteSectorial</class>
+    <class>domain.Area</class>
+    <class>mediotransporte.MedioDeTransporte</class>
+    <class>domain.Miembro</class>
+    <class>domain.Organizacion</class>
+    <class>domain.Sector</class>
+    <class>domain.SectorDeMunicipios</class>
+    <class>domain.SectorDeProvincias</class>
+    <class>consumo.Medicion</class>
+    <class>consumo.Periodo</class>
+    <class>mediotransporte.Linea</class>
+    <class>mediotransporte.ServicioContratado</class>
+    <class>mediotransporte.Ubicacion</class>
+    <class>trayecto.Trayecto</class>
+
+
+    <properties>
+      <property name="hibernate.archive.autodetection" value="class"/>
+      <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+      <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/tpa"/>
+      <property name="hibernate.connection.username" value="root"/>
+      <property name="hibernate.connection.password" value="1234"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="use_sql_comments" value="true"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- si no se quiere que cambie la DB, se cambia esto -->
+    </properties>
+
+  </persistence-unit>
+
+</persistence> 
